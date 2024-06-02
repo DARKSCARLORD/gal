@@ -1,0 +1,230 @@
+
+body {
+    font-family: Arial, sans-serif; 
+    /* Set font for the entire document */
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+    /* Set background color for the page */
+    color: black; 
+    /* Set text color */
+    font-weight: bold; 
+    /* Set bold font  */
+}
+
+
+
+
+/* Header Style */
+header {
+    background-color: #333; 
+    /* Darker background for header */
+    color: white; 
+    /* White text  */
+    padding: 10px 20px;
+     /* Padding around header  */
+    display: flex;
+    justify-content: space-between; 
+    /* Space between logo and nav */
+    /* justify-content is used to align columns within the container. This is spicifically for the layout. I learned more about the 'grid' principles in StackOverFlow. The link is pasted below.*/
+    /* ref:https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs#:~:text=justify%2Dcontent%20is%20used%20to,less%20than%20the%20grid%20container*/
+
+    align-items: center; 
+    /* Center items vertically */
+}
+
+/* Logo Style*/
+.logo {
+    font-size: 1.5em;
+     /* Larger font size for logo */
+    font-weight: bold;
+     /* Bold */
+}
+
+
+
+
+/* Navigation Style */
+nav ul {
+    list-style: none;
+     /* Remove all default list tyles. Also had to add 'margin:0 , padding:0'. */
+     /*ref: https://www.w3schools.com/css/css_list.asp */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+     /* Center items  */
+}
+
+nav ul li {
+    margin: 0 15px; 
+    /* Spacing between nav buttons */
+}
+
+nav ul li a {
+    color: white; 
+    /* White text  */
+    text-decoration: none; 
+    /* Remove underline */
+    font-weight: bold;
+     /* Bold font */
+}
+/* EXTRA Cool Bit. . .This selector is used to select elements when the mouse 'hovers' over them.*/
+/* Ref: https://www.w3schools.com/cssref/sel_hover.php*/
+nav ul li a:hover {
+    text-decoration: underline;
+     /* Underline on hover */
+}
+
+
+
+/* Navigation Buttons Styles */
+.nav-buttons {
+    display: flex; 
+    /* Flexbox for buttons */
+    gap: 10px; 
+    /* grid-row-gap gives space between buttons for layout purposes */
+    /*ref:https://www.w3schools.com/cssref/pr_grid-row-gap.php */
+}
+
+.nav-buttons a {
+    background-color: #0073aa;
+     /* Button background color */
+    color: white; 
+    /* Button text color */
+    padding: 10px 15px; 
+    /* Padding inside buttons */
+    text-decoration: none; 
+    /* Remove underline from previous tag set */
+    border-radius: 5px; 
+    /* Rounds the corners */
+    /* extra - radious applies the the backbround */
+}
+
+
+/*/EXTRA This selector is also used to select elements when the mouse 'hovers' over them.*/
+/* Ref: https://www.w3schools.com/cssref/sel_hover.php*/
+.nav-buttons a:hover {
+    background-color: #005f8a; /* Darker background on hover */
+}
+
+
+/* Main Content Styles */
+.main-content {
+    min-height: 60vh; /* Min height for main content */
+    padding: 20px 50px; /* Padding around content */
+}
+
+
+/* Text Section Styles */
+.text-section {
+    flex: 0 0 33.33%; 
+    padding: 20px; 
+    /* Padding inside text section */
+    text-align: center; 
+    /* Center align  */
+    font-family: monospace; 
+    /* Monospace font */
+    font-size: 1.5em; 
+    /* Larger font  */
+}
+
+/* I have a slideshow elements on my home page. The block of code is for the arrow buttons on the right and left side of the slideshow used to move the imiges.*/
+/* more about this cool feature: https://www.w3schools.com/howto/howto_css_next_prev.asp/*
+/* Slideshow Navigation Buttons */
+.prev, .next {
+    position: absolute; /* Layout position within the container. I wanted to be sure the arrow buttons could overlap the content that would display. */
+    /*Ref:https://www.w3schools.com/css/css_positioning.asp*/
+    top: 50%; /* Center vertically. */
+    transform: translateY(-50%); 
+    /* Offset to exact center. */
+    /*EXTRA cool bit recommended this block of code by https://www.w3schools.com/css/css3_2dtransforms.asp */
+    font-size: 24px; 
+    /* Larger font size */
+    color: white;
+    /* White color */
+    padding: 10px; 
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    border: none; 
+    /* No border */
+}
+
+
+.prev {
+    left: 0; /* Position to the left */
+}
+
+.next {
+    right: 0; /* Position to the right */
+}
+
+
+/* Centered Text  */
+.text-center {
+    text-align: center; /* Center align text */
+}
+
+
+
+/* Footer Styles */
+.footer {
+    display: flex; 
+    /* Flexbox for footer sections */
+    justify-content: space-around; 
+    /* Space between sections */
+    background-color: #333;
+    /* Dark background for footer (same as header) */
+    color: white; 
+    /* White color */
+    padding: 20px 0; 
+    /* Padding around content */
+}
+
+/* there are multifle columns required for my footer. This is the reason "footer-section" is listed multiplue times. */
+.footer-section {
+    flex: 1; 
+    /* Flexbox item settings */
+    padding: 20px; 
+    /* Padding inside sections */
+}
+
+.footer-section h4, .footer-section p {
+    margin: 5px 0; 
+    /* Margin between footer elements */
+}
+
+.footer-section p a {
+    color: white; 
+    /* White text color for links */
+    text-decoration: none; 
+    /* Remove default underline */
+}
+
+.footer-section p a:hover {
+    text-decoration: underline; 
+    /* Underline on hover */
+}
+
+
+
+
+/* Subscription Form Styles */
+.subscriptions form {
+    text-align: center; 
+    /* Center align form */
+    margin-top: 20px; 
+    /* Margin at the top */
+}
+
+.subscriptions input[type="email"] {
+    padding: 10px; 
+    /* Padding inside email input */
+    margin-right: 10px; 
+    /* Margin to the right */
+}
+
+.subscriptions button {
+    padding: 10px; 
+    /* Padding inside button */
+}
